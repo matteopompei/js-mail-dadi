@@ -1,16 +1,23 @@
 const mailList = ["pompei@email.com", "ciao@email.com", "osnago@email.com"];
-let email = prompt("Inserisci la tua email");
-let emailCheck = false
+let emailCheck = false;
+let validazione = document.getElementById("mail-check");
 
-for (i=0; i < mailList.length; i++) {
-  if (mailList[i]==email) {
-    emailCheck = true;
+
+function controlla() {
+  let email = document.getElementById("email").value;
+
+  for (i=0; i < mailList.length; i++) {
+    if (mailList[i]==email) {
+      emailCheck = true;
+    }
   }
-}
 
-if (emailCheck) {
-  alert("Benvenuto!");
-}else {
-  alert("Accesso negato!");
-  location.reload();
+  if (emailCheck) {
+    validazione.innerHTML = "Mail verificata, benvenuto!";
+    validazione.classList.add("valida");
+  }
+  else {
+    validazione.innerHTML = "Accesso negato!";
+    validazione.classList.add("non-valida");
+  }
 }
