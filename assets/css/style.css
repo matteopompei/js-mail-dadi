@@ -1,0 +1,21 @@
+body {
+  background-color: #333;
+  font-size: 3rem;
+  font-family: 'Courier New', Courier, monospace;
+  color: #CCC;
+}
+
+div {
+  margin: 150px auto;
+  width: fit-content;
+}
+
+a {
+  color: #CCC;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: #FFF;
+}
