@@ -2,7 +2,6 @@ const mailList = ["pompei@email.com", "ciao@email.com", "osnago@email.com"];
 let emailCheck = false;
 let validazione = document.getElementById("mail-check");
 
-
 function controlla() {
   let email = document.getElementById("email").value;
 
