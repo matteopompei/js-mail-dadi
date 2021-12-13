@@ -1,6 +1,7 @@
 const mailList = ["pompei@email.com", "ciao@email.com", "osnago@email.com"];
 let emailCheck = false;
 let validazione = document.getElementById("mail-check");
+let bottoneRiprova = document.getElementById("riprova");
 
 function controlla() {
   let email = document.getElementById("email").value;
@@ -18,5 +19,10 @@ function controlla() {
   else {
     validazione.innerHTML = "Accesso negato!";
     validazione.classList.add("non-valida");
+    bottoneRiprova.classList.remove("hidden");
   }
+}
+
+function riprova() {
+  location.reload();
 }
