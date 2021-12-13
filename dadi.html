@@ -8,8 +8,20 @@
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-  <div>
-    <a href="index.html">&LeftArrow; Indietro</a>
+  <div id="container">
+    <div>
+      Il punteggio del tuo dado è: <span id="dado-user"></span>
+    </div>
+    <div>
+      Il punteggio del dado del PC è: <span id="dado-pc"></span>
+    </div>
+    <div id="risultato"></div>
+
+    <button onclick="rilancia()">Tira di nuovo!</button>
+
+    <div id="indietro">
+      <a href="index.html">&LeftArrow; Indietro</a>
+    </div>
   </div>
   <script src="assets/js/dadi.js"></script>
 </body>

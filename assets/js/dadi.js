@@ -1,15 +1,23 @@
 let dadoUser = Math.floor(Math.random() * 6) + 1;
 let dadoPC = Math.floor(Math.random() * 6) + 1;
+let risultato = document.getElementById("risultato");
 
-alert("Il tuo dado: " + dadoUser);
-alert("Il dado del PC: " + dadoPC);
+document.getElementById("dado-user").innerHTML = dadoUser;
+document.getElementById("dado-pc").innerHTML = dadoPC;
 
 if (dadoUser > dadoPC) {
-  alert("Hai vinto!");
+  risultato.innerHTML = "Hai vinto!";
+  risultato.classList.add("vinto");
 }
 else if (dadoUser < dadoPC) {
-  alert("Hai perso!");
+  document.getElementById("risultato").innerHTML = "Hai perso!";
+  risultato.classList.add("perso");
 }
 else {
-  alert("Hai pareggiato!");
+  document.getElementById("risultato").innerHTML = "Pareggio!";
+  risultato.classList.add("pareggio");
+}
+
+function rilancia() {
+  location.reload();
 }
